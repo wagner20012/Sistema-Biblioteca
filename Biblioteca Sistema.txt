@@ -1,0 +1,53 @@
+O sistema simula o gerenciamento de uma pequena biblioteca. Ele permite que o bibliotecário adicione novos livros, registre empréstimos, verifique a disponibilidade de um livro, liste livros emprestados e exiba todos os livros cadastrados. A interação é feita por meio de um menu que permite ao usuário escolher entre essas opções.
+
+Classe Livro:
+
+Representa os livros da biblioteca, contendo informações como título, autor, ano de publicação, status de empréstimo, nome de quem pegou o livro emprestado e a data de devolução.
+Atributos:
+
+titulo: título do livro.
+autor: nome do autor do livro.
+anoPublicacao: ano em que o livro foi publicado.
+emprestado: indica se o livro está emprestado (true ou false).
+nomeEmprestado: armazena o nome da pessoa que pegou o livro emprestado.
+dataDevolucao: data de devolução do livro.
+
+Métodos:
+getTitulo(): retorna o título do livro.
+isEmprestado(): retorna se o livro está emprestado.
+registrarEmprestimo(String nomeEmprestado, LocalDate dataDevolucao): registra o empréstimo de um livro, marcando-o como emprestado.
+devolverLivro(): redefine o status do livro como disponível.
+exibirDetalhes(): exibe os detalhes do livro, incluindo quem pegou emprestado e a data de devolução (caso o livro esteja emprestado).
+
+Classe Biblioteca:
+
+Gerencia a coleção de livros da biblioteca, permitindo operações como adicionar livros, registrar empréstimos, verificar a disponibilidade e listar os livros.
+Atributos:
+livros: uma lista de objetos do tipo Livro, representando todos os livros cadastrados na biblioteca.
+
+Métodos:
+
+adicionarLivro(Livro livro): adiciona um novo livro à lista de livros.
+registrarEmprestimo(String titulo, String nomeEmprestado, LocalDate dataDevolucao): registra o empréstimo de um livro específico (buscado pelo título).
+verificarDisponibilidade(String titulo): verifica se um livro específico está disponível ou emprestado.
+listarLivrosEmprestados(): lista todos os livros que estão emprestados no momento.
+exibirTodosOsLivros(): exibe todos os livros cadastrados na biblioteca, emprestados ou não.
+
+Classe SistemaBiblioteca:
+
+Contém o método main() que gerencia a execução do programa.
+Fluxo do programa:
+O bibliotecário insere seu nome para identificação.
+O sistema oferece um menu com as seguintes opções:
+Registrar um novo empréstimo.
+Verificar a disponibilidade de um livro.
+Listar os livros que estão emprestados.
+Exibir todos os livros cadastrados.
+Sair do sistema.
+Dependendo da escolha do usuário, o sistema executa as ações necessárias.
+O programa continua em um loop até que a opção "Sair" seja escolhida.
+Como o sistema funciona:
+Ao iniciar o programa, o bibliotecário insere seu nome, que é utilizado para identificação durante a execução do sistema.
+O sistema apresenta um menu com cinco opções.
+O bibliotecário pode adicionar livros, registrar novos empréstimos, verificar a disponibilidade de livros e listar os livros emprestados ou todos os livros cadastrados.
+Ao final, o sistema é encerrado, e o Scanner é fechado.
